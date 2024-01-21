@@ -1,0 +1,25 @@
+<input type="text" placeholder="Search by name" (keyup)="filterTable($event)">
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Income (MYR)</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of filteredData">
+      <td>{{ row.name }}</td>
+      <td>{{ row.age }}</td>
+      <td>RM {{ row.income }} </td>
+      <td>
+        <ng-container *ngIf="row.age >= 18 && row.income >= 3000; else failLabel">
+          <button (click)="applyCreditCard(row.id)">PASS</button>
+        </ng-container>
+        <ng-template #failLabel>FAIL</ng-template>
+      </td>
+    </tr>
+  </tbody>
+</table>
