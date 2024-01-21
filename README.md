@@ -1,4 +1,8 @@
-# Demo
+# Simple Table with Search
+
+This project implements a simple table with filtering functionality based on names. Users can easily search and filter the table entries using the provided name input.
+
+# Development environment
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
